@@ -1,0 +1,66 @@
+[
+	{
+		"type": "Helper",
+		"displaytext": "include_recipe",
+		"package": "Resources",
+		"snippet": "include_recipe '${1:example::recipe}'",
+		"description": "```include_recipe 'example::recipe'```\n\nAdding a recipe from a cookbook.",
+		"descriptionMoreURL": ""
+	},
+	{
+		"type": "Helper",
+		"displaytext": "platform_family?",
+		"package": "Resources",
+		"snippet": "platform_family?('${1:debian}')",
+		"description": "```platform_family?('debian')```\n\nChecks node attributes, if platform_family is the defined.",
+		"descriptionMoreURL": ""
+	},
+	{
+		"type": "Helper",
+		"displaytext": "platform?",
+		"package": "Resources",
+		"snippet": "platform?('${1:ubuntu}')",
+		"description": "```platform_family?('ubuntu')```\n\nChecks node attributes, if platform is the defined.",
+		"descriptionMoreURL": ""
+	},
+	{
+		"type": "Helper",
+		"displaytext": "reboot_pending?",
+		"package": "Resources",
+		"snippet": "reboot_pending?",
+		"description": "```reboot_pending```\n\nIs a reboot pending?",
+		"descriptionMoreURL": ""
+	},
+	{
+		"type": "Helper",
+		"displaytext": "cookbook_name",
+		"package": "Resources",
+		"snippet": "cookbook_name",
+		"description": "",
+		"descriptionMoreURL": ""
+	},
+	{
+		"type": "Helper",
+		"displaytext": "recipe_name",
+		"package": "Resources",
+		"snippet": "recipe_name",
+		"description": "",
+		"descriptionMoreURL": ""
+	},
+	{
+	"type": "Helper",
+	"displaytext": "cache_path_chef",
+	"package": "Resources",
+	"snippet": "blablabla",
+	"description": "```hmpf```\n\nInserts the Chef Cache path",
+	"descriptionMoreURL": ""
+},
+{
+	"type": "Helper",
+	"displaytext": "File_exist?",
+	"package": "Resources",
+	"snippet": "{ ::File.exist?('${1:/var/www/html/index.html}') }",
+	"description": "```{ ::File.exist?('${1:/var/www/html/index.html}') }```\n\nDisable automatic capitalization for this key.",
+	"descriptionMoreURL": ""
+}
+]
