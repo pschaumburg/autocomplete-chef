@@ -1,66 +1,170 @@
 [
 	{
-		"type": "Helper",
-		"displaytext": "include_recipe",
-		"package": "Resources",
-		"snippet": "include_recipe '${1:example::recipe}'",
-		"description": "```include_recipe 'example::recipe'```\n\nAdding a recipe from a cookbook.",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "chef_version",
+		"package": "metadata.rb",
+		"snippet": "chef_version '${1:>=} ${2:13}'",
+		"description": "```chef_version '>= 13''```\n\nSet minimum tested version.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-		"type": "Helper",
-		"displaytext": "platform_family?",
-		"package": "Resources",
-		"snippet": "platform_family?('${1:debian}')",
-		"description": "```platform_family?('debian')```\n\nChecks node attributes, if platform_family is the defined.",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "depends",
+		"package": "metadata.rb",
+		"snippet": "depends '${1:apache2}', '${2:<} ${3:1.0}'",
+		"description": "```depends 'apache2', '< 1.0'```\n\nAdds dependencies to another cookbook with specified version.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-		"type": "Helper",
-		"displaytext": "platform?",
-		"package": "Resources",
-		"snippet": "platform?('${1:ubuntu}')",
-		"description": "```platform_family?('ubuntu')```\n\nChecks node attributes, if platform is the defined.",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "description",
+		"package": "metadata.rb",
+		"snippet": "description '${1:A fancy cookbook that manages a herd of cats!}'",
+		"description": "```description 'A fancy cookbook that manages a herd of cats!'```\n\nAdds a short description for cookbook.\nThis description is also shown at the Chef Supermarket.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-		"type": "Helper",
-		"displaytext": "reboot_pending?",
-		"package": "Resources",
-		"snippet": "reboot_pending?",
-		"description": "```reboot_pending```\n\nIs a reboot pending?",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "gem",
+		"package": "metadata.rb",
+		"snippet": "gem '${1:poise}'",
+		"description": "```gem 'poise'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-		"type": "Helper",
-		"displaytext": "cookbook_name",
-		"package": "Resources",
-		"snippet": "cookbook_name",
-		"description": "",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "issues_url",
+		"package": "metadata.rb",
+		"snippet": "issues_url '${1:https://github.com/johndoe/mycookbook/issues}'",
+		"description": "```issues_url 'https://github.com/johndoe/mycookbook/issues'```\n\nSet issues url to show link in Chef Supermarket.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-		"type": "Helper",
-		"displaytext": "recipe_name",
-		"package": "Resources",
-		"snippet": "recipe_name",
-		"description": "",
-		"descriptionMoreURL": ""
+		"type": "Metadata",
+		"displaytext": "license",
+		"package": "metadata.rb",
+		"snippet": "license '${1:All Rights Reserved}'",
+		"description": "```license 'All Rights Reserved'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
 	{
-	"type": "Helper",
-	"displaytext": "cache_path_chef",
-	"package": "Resources",
-	"snippet": "blablabla",
-	"description": "```hmpf```\n\nInserts the Chef Cache path",
-	"descriptionMoreURL": ""
-},
-{
-	"type": "Helper",
-	"displaytext": "File_exist?",
-	"package": "Resources",
-	"snippet": "{ ::File.exist?('${1:/var/www/html/index.html}') }",
-	"description": "```{ ::File.exist?('${1:/var/www/html/index.html}') }```\n\nDisable automatic capitalization for this key.",
-	"descriptionMoreURL": ""
-}
+		"type": "Metadata",
+		"displaytext": "long_description README.md",
+		"package": "metadata.rb",
+		"snippet": "long_description ${1:IO.read(File.join(File.dirname(__FILE__), 'README.md'))}",
+		"description": "```long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))```\n\nRuby Syntax to include README.md as long_description.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "long_description regular",
+		"package": "metadata.rb",
+		"snippet": "long_description <<-EOH\n${1:= DESCRIPTION:\n\nComplete Debian/Ubuntu style Apache2 configuration.}\nEOH",
+		"description": "```long_description <<-EOH\n${1:= DESCRIPTION:\n\nComplete Debian/Ubuntu style Apache2 configuration.}\nEOH```\n\nAdding long_description as full text.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "maintainer_email",
+		"package": "metadata.rb",
+		"snippet": "maintainer_email '${1:john_doe@example.com}'",
+		"description": "```maintainer_email 'john_doe@example.com'```\n\nAdding maintainer e-mail address.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "maintainer",
+		"package": "metadata.rb",
+		"snippet": "maintainer '${1:John Doe}'",
+		"description": "```maintainer 'John Doe'```\n\nAdding maintainer name.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "name",
+		"package": "metadata.rb",
+		"snippet": "name '${1:cats}'",
+		"description": "```name 'cats'```\n\nCookbook name.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "ohai_version",
+		"package": "metadata.rb",
+		"snippet": "ohai_version '${1:>=} ${2:13}'",
+		"description": "```ohai_version '>= 13'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "privacy",
+		"package": "metadata.rb",
+		"snippet": "privacy",
+		"description": "```privacy```\n\nSets privacy flag.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "provides",
+		"package": "metadata.rb",
+		"snippet": "provides '${1:cats::sleep}'",
+		"description": "```provides 'cats::sleep'```\n\nProvides cookbook.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "provides definitions",
+		"package": "metadata.rb",
+		"snippet": "provides '${1:here(:kitty, :time_to_eat)}'",
+		"description": "```provides 'here(:kitty, :time_to_eat)'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "provides resources",
+		"package": "metadata.rb",
+		"snippet": "provides '${1:service[snuggle]}'",
+		"description": "```provides 'service[snuggle]'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "recipe",
+		"package": "metadata.rb",
+		"snippet": "recipe '${1:cats::sleep}', '${2:For a crazy 20 hours a day.}'",
+		"description": "```recipe 'cats::sleep', 'For a crazy 20 hours a day.'```\n\n",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "source_url",
+		"package": "metadata.rb",
+		"snippet": "source_url '${1:https://github.com/johndoe/mycookbook}'",
+		"description": "```source_url 'https://github.com/johndoe/mycookbook'```\n\nDefine source url.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "supports OS",
+		"package": "metadata.rb",
+		"snippet": "supports '${1:ubuntu}'",
+		"description": "```supports 'ubuntu'```\n\nDefine supported OS.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "supports specified OS",
+		"package": "metadata.rb",
+		"snippet": "supports '${1:ubuntu}', '${2:>=} ${3:14.04}",
+		"description": "```supports 'ubuntu', '>= 14.04```\n\nDefine supported OS with a specific version.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	},
+	{
+		"type": "Metadata",
+		"displaytext": "version",
+		"package": "metadata.rb",
+		"snippet": "version '${0:2.0.0}'",
+		"description": "```version '2.0.0'```\n\nDefines cookbook version.",
+		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
+	}
 ]
