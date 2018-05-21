@@ -3,6 +3,7 @@
 		"type": "Helper",
 		"displaytext": "include_recipe",
 		"package": "Resources",
+		"icon": "<div style='color:Red; background-color:#b9deb6;'><i class='icon-heart'></i></div>",
 		"snippet": "include_recipe '${1:example::recipe}'",
 		"description": "```include_recipe 'example::recipe'```\n\nAdding a recipe from a cookbook.",
 		"descriptionMoreURL": ""
@@ -49,18 +50,27 @@
 	},
 	{
 	"type": "Helper",
-	"displaytext": "cache_path_chef",
+	"displaytext": "cache_path_chef_displaytext",
 	"package": "Resources",
-	"snippet": "blablabla",
+	"snippet": "#{Chef::Config['file_cache_path']}",
 	"description": "```hmpf```\n\nInserts the Chef Cache path",
 	"descriptionMoreURL": ""
 },
 {
 	"type": "Helper",
-	"displaytext": "File_exist?",
+	"displaytext": "file_existdiusplay",
 	"package": "Resources",
-	"snippet": "{ ::File.exist?('${1:/var/www/html/index.html}') }",
-	"description": "```{ ::File.exist?('${1:/var/www/html/index.html}') }```\n\nDisable automatic capitalization for this key.",
+	"prefix": "file_exist",
+	"snippet": "\\:\\:File\\.exist\\?\\(\\'\\$\\{1\\:/var/www/html/index.html\\}\\'\\)",
+	"description": "```{ ::File.exist?('/var/www/html/index.html') }```\n\nDisable automatic capitalization for this key.",
 	"descriptionMoreURL": ""
+},
+{
+	"type": "Helper",
+	"displaytext": "file_exist2",
+	"package": "metadata.rb",
+	"snippet": "chef_version '${1:>=} ${2:13}'",
+	"description": "```chef_version '>= 13''```\nA range of chef-client versions that are supported by this cookbook.",
+	"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 }
 ]
