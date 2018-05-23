@@ -29,7 +29,7 @@
 		"displaytext": "reboot_pending?",
 		"package": "Resources",
 		"snippet": "reboot_pending?",
-		"description": "```reboot_pending```\n\nIs a reboot pending?",
+		"description": "```reboot_pending?```\n\nIs a reboot pending?",
 		"descriptionMoreURL": ""
 	},
 	{
