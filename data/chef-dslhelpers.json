@@ -3,7 +3,7 @@
 		"type": "Helper",
 		"displaytext": "include_recipe",
 		"package": "Resources",
-		"icon": "<div style='color:Red; background-color:#b9deb6;'><i class='icon-heart'></i></div>",
+		"icon": "<div style='color:Red; background-color:#b9deb6;'><img height='16px' src='https://upload.wikimedia.org/wikipedia/commons/8/8a/Chef_logo.svg'></img></div>",
 		"snippet": "include_recipe '${1:example::recipe}'",
 		"description": "```include_recipe 'example::recipe'```\n\nAdding a recipe from a cookbook.",
 		"descriptionMoreURL": ""
