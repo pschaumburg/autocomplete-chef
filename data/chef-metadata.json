@@ -3,7 +3,6 @@
 		"type": "Metadata",
 		"displaytext": "chef_version",
 		"package": "metadata.rb",
-		"icon": "<div style='color:Brown; background-color:#b9deb6;'><i class='icon-squirrel'></i></div>",
 		"snippet": "chef_version '${1:>=} ${2:13}'",
 		"description": "```chef_version '>= 13''```\nA range of chef-client versions that are supported by this cookbook.",
 		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"

@@ -3,9 +3,8 @@
 		"type": "Helper",
 		"displaytext": "include_recipe",
 		"package": "Resources",
-		"icon": "<div style='color:Red; background-color:#b9deb6;'><img height='16px' src='https://upload.wikimedia.org/wikipedia/commons/8/8a/Chef_logo.svg'></img></div>",
 		"snippet": "include_recipe '${1:example::recipe}'",
-		"description": "```include_recipe 'example::recipe'```\n\nAdding a recipe from a cookbook.",
+		"description": "Adding a recipe from a cookbook.",
 		"descriptionMoreURL": ""
 	},
 	{
@@ -13,7 +12,7 @@
 		"displaytext": "platform_family?",
 		"package": "Resources",
 		"snippet": "platform_family?('${1:debian}')",
-		"description": "```platform_family?('debian')```\n\nChecks node attributes, if platform_family is the defined.",
+		"description": "Checks node attributes, if platform_family is the defined.",
 		"descriptionMoreURL": ""
 	},
 	{
@@ -21,7 +20,7 @@
 		"displaytext": "platform?",
 		"package": "Resources",
 		"snippet": "platform?('${1:ubuntu}')",
-		"description": "```platform_family?('ubuntu')```\n\nChecks node attributes, if platform is the defined.",
+		"description": "Checks node attributes, if platform is the defined.",
 		"descriptionMoreURL": ""
 	},
 	{
@@ -29,7 +28,7 @@
 		"displaytext": "reboot_pending?",
 		"package": "Resources",
 		"snippet": "reboot_pending?",
-		"description": "```reboot_pending?```\n\nIs a reboot pending?",
+		"description": "Is a reboot pending?",
 		"descriptionMoreURL": ""
 	},
 	{
@@ -53,7 +52,7 @@
 	"displaytext": "cache_path_chef_displaytext",
 	"package": "Resources",
 	"snippet": "#{Chef::Config['file_cache_path']}",
-	"description": "```hmpf```\n\nInserts the Chef Cache path",
+	"description": "Inserts the Chef Cache path",
 	"descriptionMoreURL": ""
 },
 {
@@ -62,7 +61,7 @@
 	"package": "Resources",
 	"prefix": "file_exist",
 	"snippet": "\\:\\:File\\.exist\\?\\(\\'\\$\\{1\\:/var/www/html/index.html\\}\\'\\)",
-	"description": "```{ ::File.exist?('/var/www/html/index.html') }```\n\nDisable automatic capitalization for this key.",
+	"description": "Disable automatic capitalization for this key.",
 	"descriptionMoreURL": ""
 },
 {
@@ -70,7 +69,7 @@
 	"displaytext": "file_exist2",
 	"package": "metadata.rb",
 	"snippet": "chef_version '${1:>=} ${2:13}'",
-	"description": "```chef_version '>= 13''```\nA range of chef-client versions that are supported by this cookbook.",
+	"description": "A range of chef-client versions that are supported by this cookbook.",
 	"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 }
 ]
