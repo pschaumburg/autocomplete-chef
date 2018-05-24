@@ -4,72 +4,47 @@
 		"displaytext": "include_recipe",
 		"package": "Resources",
 		"snippet": "include_recipe '${1:example::recipe}'",
-		"description": "Adding a recipe from a cookbook.",
-		"descriptionMoreURL": ""
+		"description": "A recipe can include one (or more) recipes from cookbooks by using the include_recipe method. When a recipe is included, the resources found in that recipe will be inserted (in the same exact order) at the point where the include_recipe keyword is located.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
 	},
 	{
 		"type": "Helper",
 		"displaytext": "platform_family?",
 		"package": "Resources",
 		"snippet": "platform_family?('${1:debian}')",
-		"description": "Checks node attributes, if platform_family is the defined.",
-		"descriptionMoreURL": ""
+		"description": "Use the platform_family? method to ensure that certain actions are run for specific platform family. The platform_family? method will return true if one of the listed parameters matches the node['platform_family'] attribute that is detected by Ohai during every chef-client run.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
 	},
 	{
 		"type": "Helper",
 		"displaytext": "platform?",
 		"package": "Resources",
 		"snippet": "platform?('${1:ubuntu}')",
-		"description": "Checks node attributes, if platform is the defined.",
-		"descriptionMoreURL": ""
+		"description": "Use the platform? method to ensure that certain actions are run for specific platform. The platform? method will return true if one of the listed parameters matches the node['platform'] attribute that is detected by Ohai during every chef-client run.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
 	},
 	{
 		"type": "Helper",
 		"displaytext": "reboot_pending?",
 		"package": "Resources",
 		"snippet": "reboot_pending?",
-		"description": "Is a reboot pending?",
-		"descriptionMoreURL": ""
+		"description": "Use the reboot_pending? method to test if a node needs a reboot, or is expected to reboot. reboot_pending? returns true when the node needs a reboot.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
 	},
 	{
 		"type": "Helper",
 		"displaytext": "cookbook_name",
 		"package": "Resources",
 		"snippet": "cookbook_name",
-		"description": "",
-		"descriptionMoreURL": ""
+		"description": "Use the cookbook_name method to return the name of a cookbook.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
 	},
 	{
 		"type": "Helper",
 		"displaytext": "recipe_name",
 		"package": "Resources",
 		"snippet": "recipe_name",
-		"description": "",
-		"descriptionMoreURL": ""
-	},
-	{
-	"type": "Helper",
-	"displaytext": "cache_path_chef_displaytext",
-	"package": "Resources",
-	"snippet": "#{Chef::Config['file_cache_path']}",
-	"description": "Inserts the Chef Cache path",
-	"descriptionMoreURL": ""
-},
-{
-	"type": "Helper",
-	"displaytext": "file_existdiusplay",
-	"package": "Resources",
-	"prefix": "file_exist",
-	"snippet": "\\:\\:File\\.exist\\?\\(\\'\\$\\{1\\:/var/www/html/index.html\\}\\'\\)",
-	"description": "Disable automatic capitalization for this key.",
-	"descriptionMoreURL": ""
-},
-{
-	"type": "Helper",
-	"displaytext": "file_exist2",
-	"package": "metadata.rb",
-	"snippet": "chef_version '${1:>=} ${2:13}'",
-	"description": "A range of chef-client versions that are supported by this cookbook.",
-	"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
-}
+		"description": "Use the recipe_name method to return the name of a recipe.",
+		"descriptionMoreURL": "https://docs.chef.io/dsl_recipe.html"
+	}
 ]
