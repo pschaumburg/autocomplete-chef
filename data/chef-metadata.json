@@ -51,7 +51,7 @@
 		"type": "Metadata",
 		"displaytext": "long_description README.md",
 		"package": "metadata.rb",
-		"snippet": "long_description ${1:IO.read(File.join(File.dirname(__FILE__), 'README.md'))}",
+		"snippet": "long_description IO.read(File.join(File.dirname(__FILE__), '${1:README.md}'))",
 		"description": "Ruby Syntax to include README.md as long_description.\nA longer description that ideally contains full instructions on the proper use of a cookbook, including definitions, libraries, dependencies, and so on. There are two ways to use this field: In this case with the contents embedded in the field itself.",
 		"descriptionMoreURL": "https://docs.chef.io/config_rb_metadata.html"
 	},
